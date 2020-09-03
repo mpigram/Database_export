@@ -4,6 +4,7 @@ from functools import lru_cache
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+
 @lru_cache(maxsize=32)
 def engine(db_url=None):
     db_url = db_url or os.getenv("DB_URL")
